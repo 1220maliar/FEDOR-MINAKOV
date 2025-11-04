@@ -1,0 +1,84 @@
+{
+  "menuIcons": [
+    {
+      "id": 1,
+      "icon": "fas fa-home",
+      "text": "Главная",
+      "url": "#home"
+    },
+    {
+      "id": 2, 
+      "icon": "fas fa-search",
+      "text": "Поиск",
+      "url": "#search"
+    },
+    {
+      "id": 3,
+      "icon": "fas fa-heart",
+      "text": "Любимые",
+      "url": "#favorites"
+    },
+    {
+      "id": 4,
+      "icon": "fas fa-music",
+      "text": "Моя музыка",
+      "url": "#my-music"
+    },
+    {
+      "id": 5,
+      "icon": "fas fa-list",
+      "text": "Плейлисты", 
+      "url": "#playlists"
+    },
+    {
+      "id": 6,
+      "icon": "fas fa-history",
+      "text": "История",
+      "url": "#history"
+    },
+    {
+      "id": 7,
+      "icon": "fas fa-download",
+      "text": "Загрузки",
+      "url": "#downloads"
+    },
+    {
+      "id": 8,
+      "icon": "fas fa-cog",
+      "text": "Настройки",
+      "url": "#settings"
+    }
+  ],
+  "socialIcons": [
+    {
+      "id": 1,
+      "icon": "fab fa-spotify",
+      "text": "Spotify",
+      "url": "https://spotify.com"
+    },
+    {
+      "id": 2,
+      "icon": "fab fa-youtube",
+      "text": "YouTube",
+      "url": "https://youtube.com"
+    },
+    {
+      "id": 3,
+      "icon": "fab fa-instagram", 
+      "text": "Instagram",
+      "url": "https://instagram.com"
+    },
+    {
+      "id": 4,
+      "icon": "fab fa-telegram",
+      "text": "Telegram",
+      "url": "https://telegram.org"
+    },
+    {
+      "id": 5,
+      "icon": "fab fa-vk",
+      "text": "VK",
+      "url": "https://vk.com"
+    }
+  ]
+}
