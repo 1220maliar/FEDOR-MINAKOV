@@ -5001,4 +5001,60 @@ body {
     padding: 10px 16px;
     font-size: 14px;
   }
+}/* Блок который полностью перекрывает верхнюю часть экрана телефона */
+.button-overlay-area {
+  position: fixed;
+  top: 0; /* Начинается с самого верха */
+  left: 0; /* Начинается с самого левого края */
+  width: 100vw; /* На всю ширину экрана */
+  height: 100px; /* Высота перекрывающей зоны */
+  background: black;
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* Кнопка "Назад к новостям" */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: black;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  z-index: 1000; /* Выше перекрывающего блока */
+  
+  border: 2px solid white;
+  box-shadow: 
+    0 0 0 2px black,
+    0 0 0 4px white;
+}
+
+/* Для мобильных - увеличиваем перекрывающую зону */
+@media (max-width: 768px) {
+  .button-overlay-area {
+    height: 120px; /* Больше высота на телефоне */
+  }
+  
+  .back-button {
+    top: 15px;
+    left: 15px;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+  .button-overlay-area {
+    height: 140px; /* Еще больше на маленьких экранах */
+  }
+  
+  .back-button {
+    top: 10px;
+    left: 10px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
 }
