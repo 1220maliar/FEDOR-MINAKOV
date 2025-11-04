@@ -4961,7 +4961,7 @@ body {
 /* Кнопка "Назад к новостям" */
 .back-button {
   position: fixed;
-  top: 20px;
+  top: 10px;
   left: 20px;
   background: black;
   color: white;
@@ -4989,8 +4989,8 @@ body {
 /* Для мобильных */
 @media (max-width: 768px) {
   .button-overlay-area {
-    top: -5px;
-    left: -20px;
+    top: -45px;
+    left: -25px;
     width: 210px;
     height: 90px;
   }
