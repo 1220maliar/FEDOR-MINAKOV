@@ -4945,3 +4945,60 @@ body {
   background: black;
   color: white;
 }
+/* Блок который перекрывает текст - УВЕЛИЧИВАЕМ */
+.button-overlay-area {
+  position: fixed;
+  top: -25px; /* Увеличили вверх */
+  left: -15px; /* Увеличили влево */
+  width: 280px; /* Шире */
+  height: 110px; /* Выше */
+  background: black;
+  z-index: 999;
+  pointer-events: none;
+  border-radius: 0 0 20px 0; /* Плавный скос */
+}
+
+/* Кнопка "Назад к новостям" */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: black;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  z-index: 1000;
+  
+  border: 2px solid white;
+  box-shadow: 
+    0 0 0 2px black,
+    0 0 0 4px white;
+}
+
+/* Для средних экранов */
+@media (max-width: 1024px) {
+  .button-overlay-area {
+    top: -20px;
+    left: -12px;
+    width: 260px;
+    height: 100px;
+  }
+}
+
+/* Для мобильных */
+@media (max-width: 768px) {
+  .button-overlay-area {
+    top: -15px;
+    left: -10px;
+    width: 200px;
+    height: 80px;
+  }
+  
+  .back-button {
+    top: 15px;
+    left: 15px;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
