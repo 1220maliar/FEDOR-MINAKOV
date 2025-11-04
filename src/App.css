@@ -5058,3 +5058,31 @@ body {
     font-size: 13px;
   }
 }
+/* АГРЕССИВНОЕ перекрытие только для телефона */
+@media (max-width: 768px) {
+  .button-overlay-area {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 200px !important; /* Очень большая высота */
+    background: black !important;
+    z-index: 999 !important;
+    pointer-events: none !important;
+  }
+  
+  .article-content {
+    padding-top: 120px !important; /* Дополнительный отступ */
+  }
+  
+  .back-button {
+    z-index: 1000 !important;
+  }
+}
+
+/* На компьютере - никакого перекрытия */
+@media (min-width: 769px) {
+  .button-overlay-area {
+    display: none !important;
+  }
+}
