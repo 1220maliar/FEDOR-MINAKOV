@@ -28,8 +28,7 @@ const Sidebar = ({ isOpen, onToggle }) => {
     }
   ];
 
-  const handleLinkClick = (e, url) => {
-    e.preventDefault();
+  const handleLinkClick = (url) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
@@ -40,27 +39,23 @@ const Sidebar = ({ isOpen, onToggle }) => {
           <h3 className="sidebar-title">Социальные сети</h3>
           <div className="social-links-container">
             {socialItems.map((item) => (
-              <a
+              <button
                 key={item.id}
-                href={item.url}
                 className="social-link"
-                onClick={(e) => handleLinkClick(e, item.url)}
-                style={{ color: 'white' }} // Добавляем белый цвет
+                onClick={() => handleLinkClick(item.url)}
               >
-                <i 
-                  className={item.icon} 
-                  style={{ color: 'white' }} // Принудительно белый для иконок
-                ></i>
+                <i className={item.icon}></i>
                 <span className="social-text">{item.text}</span>
-              </a>
+              </button>
             ))}
           </div>
         </div>
       </nav>
 
-      {isOpen && (
-        <div className="overlay" onClick={onToggle}></div>
-      )}
+      {/* Перекрывающий блок для сайдбара */}
+      <div className="sidebar-overlay-area"></div>
+
+      {isOpen && <div className="overlay" onClick={onToggle}></div>}
     </>
   );
 };

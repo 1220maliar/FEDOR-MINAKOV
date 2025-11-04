@@ -5086,3 +5086,53 @@ body {
     display: none !important;
   }
 }
+/* Перекрывающий блок для боковой панели - ТОЛЬКО для телефона */
+@media (max-width: 768px) {
+  .sidebar-overlay-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px; /* Ширина как у сайдбара */
+    background: black;
+    z-index: 998; /* Ниже сайдбара но выше контента */
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Когда сайдбар открыт - показываем перекрытие */
+  .sidebar.open + .sidebar-overlay-area {
+    display: block;
+  }
+  
+  /* Когда сайдбар закрыт - скрываем перекрытие */
+  .sidebar-overlay-area {
+    display: none;
+  }
+}
+
+/* На компьютере - скрываем перекрывающий блок */
+@media (min-width: 769px) {
+  .sidebar-overlay-area {
+    display: none;
+  }
+}
+
+/* Существующие стили сайдбара */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100vh;
+  background: black;
+  border-right: 1px solid white;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
