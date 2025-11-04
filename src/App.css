@@ -4989,7 +4989,7 @@ body {
 /* Для мобильных */
 @media (max-width: 768px) {
   .button-overlay-area {
-    top: -25px;
+    top: -45px;
     left: -20px;
     width: 210px;
     height: 90px;
